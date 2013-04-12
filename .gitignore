@@ -1,0 +1,8 @@
+/*.suo
+/_ReSharper.SignalRProxyGenerator
+/packages
+/src/SignalRProxyGenerator/obj
+/src/SignalRProxyGenerator/*.user
+/src/SignalRProxyGenerator.Sample/bin
+/src/SignalRProxyGenerator.Sample/obj
+/src/SignalRProxyGenerator/bin
