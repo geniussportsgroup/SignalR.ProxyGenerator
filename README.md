@@ -6,8 +6,11 @@ A command line tool to generate SignalR hub proxies so that you can minify your 
 ###Options
 
 [Option('u', "url", Required = true, HelpText = "The URL to the magic signalr address excluding the host name. Include the website address. E.g /MyWebsite/signalr. This website would be accessible at http://HOSTNAME.DOMAIN/MyWebsite/signalr")]
+
 [Option('p', "path", Required = true, HelpText = "Bin path of Hub dll")]
+
 [Option('o', "output", Required = true, HelpText = "Output path for generated proxy code")]
+
 [Option('m', "meta", Required = false, HelpText = "CSV lsit of meta data")]
 
 ### Example Usage
