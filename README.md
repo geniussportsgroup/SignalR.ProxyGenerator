@@ -1,18 +1,16 @@
-SignalRProxyGenerator
+SignalR.ProxyGenerator
 =====================
 
-A command line tool to generate SignalR hub proxies so that you can minify your Hub proxy and avoid using the dynamically generated code. The tool also accepts a CSV list of Meta Data to prepend to the file. It does this so if you are using a tool like Cassette you do not need to manually edit the file after generation.
+Small wrapper over the SignalR Proxy Generator to allow you to create the proxies at build time. This will generate the normal proxy for any assmblies loaded into the app domain. All the comments are stripped out from the top. You an then prepend any text lines into the top of the proxy using the metadata array, this allows you to specify your own dependency path comments for things like jQuery.
 
-###Options
+https://www.nuget.org/packages/SignalR.ProxyGenerator
 
-[Option('u', "url", Required = true, HelpText = "The URL to the magic signalr address excluding the host name. Include the website address. E.g /MyWebsite/signalr. This website would be accessible at http://HOSTNAME.DOMAIN/MyWebsite/signalr")]
+### Usage
 
-[Option('p', "path", Required = true, HelpText = "Bin path of Hub dll")]
-
-[Option('o', "output", Required = true, HelpText = "Output path for generated proxy code")]
-
-[Option('m', "meta", Required = false, HelpText = "CSV lsit of meta data")]
-
-### Example Usage
-
-SignalRProxyGenerator.exe -u "/TestApp/signalr" -p C:\Temp\MyAssemblies -o C:\Temp\SampleOutput.js -m "// @reference ~/jquery,// @reference ~/SignalR"
+    /// <summary>
+    /// Returns the JavaScript proxy for any hubs found in any assemblies loaded into the AppDomain
+    /// </summary>
+    /// <param name="signalRUrlPath">The service URL used by the connection. Defaults to "/signalr". When created dynamically this would generate at the running address, for example if you had an IIS app called "MyApp" it would generate "http://localhost:port/MyApp/signalr".</param>
+    /// <param name="metaData">An array of lines to prepend into the file. This can be useful if you want to specify a path in your build system to a dependency such as jQuery</param>
+    /// <returns>JavaScript proxy code</returns>
+    string Generate(string signalRUrlPath = "/signalr", params string[] metaData);
