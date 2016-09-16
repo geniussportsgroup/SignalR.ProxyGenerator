@@ -25,4 +25,15 @@ This will output the JavaScript to the specified file path
 
     .\SignalR.ProxyGenerator.Console.exe -a "c:\etc\path-to-myassembly.dll" -o "C:\temp\hubs.js" -m "// Some metadata I want,// Other metadata"
 
+
+**# ONLY COMBATIBLE WITH SIGNALR VERSIONS AT 2.2.1.0 OR EARLIER #**
+
+We have compiled this at verison 2.2.1.0 so in order for the HubManager to recognise your hubs we are using an assembly redirect. If Microsoft release a new version we will need to update this.
+ 
+	<dependentAssembly>
+        <assemblyIdentity name="Microsoft.AspNet.SignalR.Core" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-2.2.1.0" newVersion="2.2.1.0" />
+      </dependentAssembly>
+
+
 If the output file is not specified the result is written to standard out.

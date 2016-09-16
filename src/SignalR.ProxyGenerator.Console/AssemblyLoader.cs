@@ -15,6 +15,11 @@ namespace GeniusSports.SignalR.ProxyGenerator.Console
 
         private static Assembly LoadFromSameFolder(object sender, ResolveEventArgs args)
         {
+            if (args.RequestingAssembly == null)
+            {
+                return null;
+            }
+
             var directoryName = Path.GetDirectoryName(args.RequestingAssembly.Location);
             var assemblyPath = Path.Combine(directoryName, new AssemblyName(args.Name).Name + ".dll");
             if (!File.Exists(assemblyPath))
