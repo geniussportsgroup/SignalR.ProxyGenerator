@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>SignalR.ProxyGenerator</id>
+    <id>SignalR.ProxyGenerator.Console</id>
     <version>$version$</version>
     <authors>Genius Sports</authors>
     <owners>Genius Sports</owners>
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
     <projectUrl>https://github.com/geniussportsgroup/SignalR.ProxyGenerator</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Small wrapper over the SignalR Proxy Generator to allow you to create the proxies at build time</description>
+    <description>Small command line tool to over the SignalR Proxy Generator to allow you to create the proxies at build time</description>
     <tags>.net45 signalr proxy</tags>
   </metadata>
   <files>
-    <file src="bin\Release\GeniusSports.SignalR.ProxyGenerator.dll" target="lib\net45\GeniusSports.SignalR.ProxyGenerator.dll" />
+    <file src="bin\release\*.*" target="tools" />
   </files>
 </package>

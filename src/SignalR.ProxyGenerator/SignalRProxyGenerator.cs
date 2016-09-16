@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
 
-namespace SignalR.ProxyGenerator
+namespace GeniusSports.SignalR.ProxyGenerator
 {
     public interface ISignalRProxyGenerator
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{02245418-D801-414F-8898-055B73841A9E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SignalR.ProxyGenerator</RootNamespace>
-    <AssemblyName>SignalR.ProxyGenerator</AssemblyName>
+    <RootNamespace>GeniusSports.SignalR.ProxyGenerator</RootNamespace>
+    <AssemblyName>GeniusSports.SignalR.ProxyGenerator</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -72,8 +72,12 @@
     <Content Include="Scripts\jquery.signalR-2.2.1.min.js" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="SignalR.ProxyGenerator.nuspec" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SignalR.ProxyGenerator.nuspec">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

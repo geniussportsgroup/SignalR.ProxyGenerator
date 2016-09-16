@@ -1,4 +1,5 @@
 ﻿using System;
+using GeniusSports.SignalR.ProxyGenerator;
 using NUnit.Framework;
 
 namespace SignalR.ProxyGenerator.Sample
